@@ -42,21 +42,32 @@ public class Payment {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
+	
+	
+	
+	public boolean equals(Object o) {
+	
+		Payment other = (Payment) o;
+		
+		if (this == o)
 			return true;
-		if (obj == null)
+		
+		if (o == null)
 			return false;
-		if (getClass() != obj.getClass())
+		
+		if (getClass() != o.getClass())
 			return false;
-		Payment other = (Payment) obj;
+
 		if (amountPaid != other.amountPaid)
 			return false;
+		
 		if (car == null) {
 			if (other.car != null)
+				
 				return false;
 		} else if (!car.equals(other.car))
 			return false;
+	
 		return true;
 	}
 

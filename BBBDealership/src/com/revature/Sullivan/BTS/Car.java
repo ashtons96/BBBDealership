@@ -15,7 +15,7 @@ public class Car {
 
 
 	
-	public Car(String ownerUsername, String price, String carType, Boolean forSale) {
+	public Car(String ownerUsername, String price, String carMakeAndModel, Boolean forSale) {
 		super();
 		
 		this.ownerUsername = ownerUsername;
@@ -29,7 +29,7 @@ public class Car {
 	}
 
 
-	public Car(String ownerUsername, String price, String carType, Boolean forSale, Integer carID) {
+	public Car(String ownerUsername, String price, String carMakeAndModel, Boolean forSale, Integer carID) {
 		super();
 		this.ownerUsername = ownerUsername;
 		this.price = price;
@@ -83,7 +83,7 @@ public class Car {
 		return carMakeAndModel;
 	}
 
-	public void setCarMakeAndModel(String carType) {
+	public void setCarMakeAndModel(String carMakeAndModel) {
 		this.carMakeAndModel = carMakeAndModel;
 	}
 
@@ -105,8 +105,8 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "Boat [boatID=" + carID + ", ownerUsername=" + ownerUsername + ", dealerPrice=" + price
-				+ ", purchasedPrice=" + purchasedPrice + ", boatType=" + carMakeAndModel + ", forSale=" + forSale + "]";
+		return "Car [CarID=" + carID + ", ownerUsername=" + ownerUsername + ", dealerPrice=" + price
+				+ ", purchasedPrice=" + purchasedPrice + ", carMakeAndModel=" + carMakeAndModel + ", forSale=" + forSale + "]";
 	}
 
 	@Override

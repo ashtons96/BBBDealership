@@ -145,6 +145,7 @@ public class LotImpl implements LotInt {
 
 	@Override
 	public void removeCar(Integer carId) {
+		
 		LoggingUtil.trace("CarLotServiceImpl - removeCar(); - start");
 
 		Boolean carRemoveCheck = false;
@@ -153,7 +154,7 @@ public class LotImpl implements LotInt {
 
 			if (carDAO.getAllCars().get(i).getCarID() == carId) {
 
-				carDAO.updateCarOnRemoval(carDAO.getCarById(carId));
+				carDAO.CarRemovalUpdate(carDAO.getCarById(carId));
 		
 				offersDAO.updateOfferOnCarRemoval(carId);
 

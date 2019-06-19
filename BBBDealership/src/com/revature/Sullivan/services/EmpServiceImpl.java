@@ -78,7 +78,7 @@ public class EmpServiceImpl implements EmpServiceInt {
 				WebImpl w = new WebImpl();
 				w.calculateMonthlyPayment(buyer);
 
-				carDAO.updateCarOnAcceptOffer(offerCar, buyer);
+				carDAO.acceptOfferUpdate(offerCar, buyer);
 				offersDAO.acceptOfferUpdate(acceptId, buyer);
 				customerDAO.acceptOfferUpdate(buyer);
 
@@ -159,12 +159,14 @@ public class EmpServiceImpl implements EmpServiceInt {
 				
 				acceptOffer();
 				exitInput = false;
+				
 			} else if (input.equals("3")) {
 				
 				LoggingUtil.trace("do loop - accept/reject decision menu - calling rejectOffer();");
 				
 				rejectOffer();
 				exitInput = false;
+				
 			} else if (input.equals("9")) {
 				
 				LoggingUtil.trace("do loop - accept/reject decision menu - exiting");

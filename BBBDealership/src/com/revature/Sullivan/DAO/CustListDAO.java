@@ -6,7 +6,7 @@ import com.revature.Sullivan.BTS.Customers;
 
 public interface CustListDAO {
 
-	public void saveCustomerList(List<Customers> customerList);
+	public void saveCustomerList(List<Customers> custList);
 	
 	public List<Customers> loadCustomerList();
 

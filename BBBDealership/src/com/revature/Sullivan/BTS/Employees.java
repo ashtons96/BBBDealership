@@ -7,7 +7,6 @@ public class Employees {
 		return employee;
 	}
 
-	// consistent for the employees
 	private final String USERNAME = "useremployee";
 	private final String PASSWORD = "employeepassword";
 

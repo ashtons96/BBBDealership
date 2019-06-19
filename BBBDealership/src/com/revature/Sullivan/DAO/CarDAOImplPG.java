@@ -56,9 +56,9 @@ private static Connection conn = ConnectionFactory.getConnection();
 
 	}
 
-	// only happens when car is bought
+	
 	@Override
-	public void updateCarOnAcceptOffer(Car car, Customers customer) {
+	public  void acceptOfferUpdate(Car car, Customers customer) {
 		String s = "update car "
 				+ "set customer_id = ?, owner_username = ?, price = ?, type = ?, for_sale = ?, purchased_price = ? "
 				+ "where car_id = ?;";
@@ -85,14 +85,14 @@ private static Connection conn = ConnectionFactory.getConnection();
 	}
 	
 	@Override
-	public void updateCarOnRemoval(Car car) {
+	public void CarRemovalUpdate(Car car) {
 		String s = "update car " + " car_available = ? " + " car_id = ?;";
 
 		PreparedStatement ps;
 
 		try {
 			ps = conn.prepareStatement(s);
-			ps.setBoolean(1, false); //removal of car from list == false in db
+			ps.setBoolean(1, false); 
 			ps.setInt(2, car.getCarID());
 			int numberOfRows = ps.executeUpdate();
 

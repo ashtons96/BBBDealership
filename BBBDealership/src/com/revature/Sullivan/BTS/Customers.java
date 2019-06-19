@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Customers {
-	private int customerID; // good
+	private int customerID; 
 
 	private List<Payment> localPaymentList;
 	private boolean makingPayments = false;
